@@ -1,0 +1,17 @@
+<div class="body">
+  <div class="login-container">
+    <h2>Đăng Nhập
+      <div *ngIf="success" style="color: green;">Thành công</div>
+      <div *ngIf="error" style="color: red;"> Thất bại</div>
+    </h2>
+    <form [formGroup]="rfContact">
+      <label for="username">Tên đăng nhập:</label>
+      <input type="text" id="username" name="username" formControlName="username" required />
+
+      <label for="password">Mật khẩu:</label>
+      <input type="password" id="password" name="password" formControlName="password" required />
+      <button (click)="onClick()">Đăng nhập</button>
+    </form>
+  </div>
+</div>
+<router-outlet></router-outlet>
