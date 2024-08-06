@@ -12,6 +12,7 @@ export class AppComponent {
   rfContact: any;
   success: any;
   error: any;
+  login =  true;
   infor = {
     username: "admin",
     password: "123456789",
@@ -29,6 +30,7 @@ export class AppComponent {
     if(this.rfContact.value.username == this.infor.username && this.rfContact.value.password == this.infor.password){
       this.router.navigateByUrl('/software');
       this.success = true;
+      this.login = false;
       console.log("Dang nhap thanh cong");
     }else{
       this.error = true;
